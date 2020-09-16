@@ -1,0 +1,10 @@
+#box {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-image: url(banana.gif);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    left: 200px;
+    top: 200px;
+}

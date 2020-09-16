@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recebendo eventos do teclado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="box">
+    </div>
+    <script>
+        let boxTop = 200;
+        let boxLeft = 200;
+
+        document.addEventListener('keydown', (event) => {
+            const keyName = event.key;
+            if (keyName === 'ArrowDown') {
+                boxTop += 10
+            }
+            if (keyName === 'ArrowUp') {
+                boxTop += -10
+            }
+            if (keyName === 'ArrowLeft') {
+                boxLeft += -50
+            }
+            if (keyName === 'ArrowRight') {
+                boxLeft += 50
+            }
+            console.log(boxTop)
+            console.log(boxLeft)
+
+            document.getElementById("box").style.top = boxTop + "px";
+            document.getElementById("box").style.left = boxLeft + "px";
+        });
+    </script>
+</body>
+
+</html>
+
+<!--console.log('keydown event\n\n' + 'key: ' + keyName);-->
